@@ -1,0 +1,19 @@
+{
+	"routes": [
+		{
+			"method": "POST",
+			"url": "/api/sendmail/",
+			"owner": "controller_mailapi",
+			"schema": "Mail",
+			"params": "id:String, username:String",
+			"input": "*to:String, *subject:String, *body:String"
+		}
+	],
+	"actions": [
+		{
+			"name": "Mail --> send",
+			"params": "id:String, username:String",
+			"input": "*to:String, *subject:String, *body:String"
+		}
+	]
+}
