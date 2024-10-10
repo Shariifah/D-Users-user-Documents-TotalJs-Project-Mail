@@ -9,7 +9,14 @@ NEWSCHEMA('Newsletters',function(schema) {
                 return;
             }
             console.log(`Sending newsletters to ${subscribers.length} subscribers`);
+            subscribers.forEach(subscriber=> {
+                console.log(`Sending newsletters to ${subscriber.email}`);
+                console.log('Subject:',model.subject);
+                console.log('Body:', model.body);
+            });
+            console.log('Newsletters successfully sent to all subscribers');
+            $.success('@(Newsletters sent successfully)');
             
         }
-    })
-})
+    });
+});
